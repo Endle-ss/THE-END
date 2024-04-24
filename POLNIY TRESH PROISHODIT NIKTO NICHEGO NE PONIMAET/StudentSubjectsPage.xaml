@@ -1,0 +1,35 @@
+﻿<Page x:Class="POLNIY_TRESH_PROISHODIT_NIKTO_NICHEGO_NE_PONIMAET.StudentSubjectsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:POLNIY_TRESH_PROISHODIT_NIKTO_NICHEGO_NE_PONIMAET"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StudentSubjectsPage">
+
+    <Grid Height="312" Width="568">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="SubTab" ItemsSource="{Binding Subjects}" AutoGenerateColumns="True" Margin="0,0,0,10" Background="#FF472C48"/>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBox x:Name="TextBX1" Grid.Row="0" Background="White"/>
+                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,233,0,-234">
+                    <Button x:Name="InsertBT" Content="Добавить" Background="White" Click="InsertBT_Click"/>
+                    <Button x:Name="DeleteBT" Content="Удалить" Margin="5" Background="#FF0034FF" Click="DeleteBT_Click" Height="23"/>
+                    <Button x:Name="UpdateBT" Content="Обновить" Background="Red" Click="UpdateBT_Click" Height="23"/>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>
